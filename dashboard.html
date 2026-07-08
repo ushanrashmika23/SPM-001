@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#222;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    background:#1f2937;
+    color:white;
+    padding:25px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:12px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:8px;
+}
+
+.sidebar li:hover,
+.sidebar .active{
+    background:#374151;
+}
+
+/* Main */
+
+.main{
+    padding:30px;
+}
+
+/* Header */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.search{
+    padding:10px 15px;
+    width:300px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.user{
+    font-weight:bold;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.card h2{
+    margin-top:10px;
+}
+
+/* Table */
+
+.table{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:15px;
+    text-align:left;
+    border-bottom:1px solid #eee;
+}
+
+th{
+    background:#fafafa;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <div class="logo">Dashboard</div>
+
+        <ul>
+            <li class="active">Home</li>
+            <li>Users</li>
+            <li>Products</li>
+            <li>Orders</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <main class="main">
+
+        <div class="header">
+            <input type="text" class="search" placeholder="Search...">
+
+            <div class="user">
+                Welcome, Admin
+            </div>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <p>Total Users</p>
+                <h2>1,254</h2>
+            </div>
+
+            <div class="card">
+                <p>Orders</p>
+                <h2>327</h2>
+            </div>
+
+            <div class="card">
+                <p>Revenue</p>
+                <h2>$18,240</h2>
+            </div>
+
+            <div class="card">
+                <p>Products</p>
+                <h2>96</h2>
+            </div>
+
+        </div>
+
+        <div class="table">
+
+            <h3 style="margin-bottom:20px;">Recent Orders</h3>
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                </tr>
+
+                <tr>
+                    <td>#1001</td>
+                    <td>John Doe</td>
+                    <td>Completed</td>
+                    <td>$250</td>
+                </tr>
+
+                <tr>
+                    <td>#1002</td>
+                    <td>Emma Smith</td>
+                    <td>Pending</td>
+                    <td>$180</td>
+                </tr>
+
+                <tr>
+                    <td>#1003</td>
+                    <td>Michael Lee</td>
+                    <td>Shipped</td>
+                    <td>$420</td>
+                </tr>
+
+                <tr>
+                    <td>#1004</td>
+                    <td>Olivia Brown</td>
+                    <td>Completed</td>
+                    <td>$95</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
